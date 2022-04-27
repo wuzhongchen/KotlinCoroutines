@@ -1,4 +1,4 @@
-package com.demo.kotlin
+package com.demo.kotlin01
 
 const val MAX = 200
 fun main() {
