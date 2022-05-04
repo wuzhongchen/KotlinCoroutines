@@ -9,9 +9,9 @@ fun main() {
     var str2:String? = "butterfly"
     str2 = null
 
-    //安全调用操作符
     var str3:String? = "theryOrey"
 //    str3 = null
+    //?. 安全调用操作符
     println(str3?.capitalize())
     println(str3?.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() })
 
