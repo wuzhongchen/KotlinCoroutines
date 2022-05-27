@@ -1,4 +1,4 @@
-class Player2(
+class _Player2(
     _name: String,
     var age: Int, //取代 this.age = age
     var isNormal: Boolean //取代 this.isNormal = isNormal
@@ -20,11 +20,11 @@ class Player2(
 }
 
 fun main() {
-    val p = Player2("Jack", 20, true)
+    val p = _Player2("Jack", 20, true)
     //p.name = "rose"
 
-    val p2 = Player2("Rose")
+    val p2 = _Player2("Rose")
 
-    val p3 = Player2("Jacky",20)
+    val p3 = _Player2("Jacky",20)
     println(p3.name)
 }

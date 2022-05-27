@@ -1,6 +1,6 @@
 import kotlin.math.absoluteValue
 
-class Player(
+class _09Player(
     //临时变量（包括仅引用一次的参数 通常都会以下划线开头的名字命名）
     _name: String,
     _age: Int,
@@ -24,6 +24,6 @@ class Player(
 }
 
 fun main() {
-    val p = Player("Jack", 20, true)
+    val p = _09Player("Jack", 20, true)
     //p.name = "rose" name只读 不可改变
 }
