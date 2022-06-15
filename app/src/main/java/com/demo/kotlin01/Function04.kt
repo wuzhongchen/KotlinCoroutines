@@ -12,7 +12,7 @@ fun main() {
     println("after nothing.")
 }
 
-//可见性修饰符 fun函数声明关键字 doSomething函数名, 函数参数, 返回类型
+//可见性修饰符 fun函数声明关键字 doSomething函数名, 函数参数, String返回类型
 //如果不打算传入值参 可以预先给参数指定默认值
 private fun doSomething(age:Int = 2, flag:Boolean):String{
     return "result"

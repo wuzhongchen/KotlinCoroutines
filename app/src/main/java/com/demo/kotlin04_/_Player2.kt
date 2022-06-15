@@ -1,6 +1,6 @@
 class _Player2(
     _name: String,
-    var age: Int, //取代 this.age = age
+    var age: Int, //取代 this.age = age 已经定义属性了
     var isNormal: Boolean //取代 this.isNormal = isNormal
 ) {
 

@@ -13,6 +13,6 @@ fun main() {
     }
 
 
-    //下划线 不赋值
+    //解构 下划线 不赋值
     val (origin,_,proxy)  = list
 }

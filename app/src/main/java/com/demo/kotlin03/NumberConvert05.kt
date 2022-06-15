@@ -8,7 +8,9 @@ fun main() {
 //    println(number1)
     println(number2)
 
+    //精度损失
     println(8.956756.toInt())
+    //四舍五入
     println(8.956756.roundToInt())
 
     val s = "%.2f".format(8.956756)

@@ -23,6 +23,6 @@ fun main() {
             println("未知")
         }
     }
-    //函数类型
+    //函数类型 kotlin.Unit
     println(level)
 }

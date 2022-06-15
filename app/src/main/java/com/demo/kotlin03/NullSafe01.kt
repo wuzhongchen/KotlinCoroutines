@@ -49,7 +49,7 @@ fun main() {
     str4 = str4?.capitalize()?.plus(" is great.")
     println(str4)
 
-    //空合并操作符 如果左边的值为null 就使用右边的结果值
+    //?:空合并操作符 如果左边的值为null 就使用右边的结果值
     str4 = null
     println(str4 ?: "jack")
 
