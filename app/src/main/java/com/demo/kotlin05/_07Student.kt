@@ -1,4 +1,8 @@
-data class Student(var name: String, val age: Int) {
+data class Student(
+    //1.主构造函数里声明的属性
+    var name: String,
+    val age: Int
+) {
     private val hobby = "music"
     val subject: String
     //var score = 0

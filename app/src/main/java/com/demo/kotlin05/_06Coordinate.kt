@@ -19,6 +19,7 @@ fun main() {
     println(Coordinate2(10, 20) == Coordinate2(10, 20))
     println(Coordinate2(10, 20) === Coordinate2(10, 20))
 
+    //解构 声明
     val (x, y) = Coordinate2(10, 20)
     println("$x, $y")
 }
