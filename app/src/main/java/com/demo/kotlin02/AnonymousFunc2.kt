@@ -8,7 +8,7 @@ fun main() {
     showOnBoard("卫生纸",getDiscountWords)
 }
 
-//具名函数 ,getDiscountWords 函数类型
+//具名函数 showOnBoard为函数名,getDiscountWords 函数类型
 //负责显示
 private inline fun showOnBoard(goodsName:String, getDiscountWords: (String,Int) -> String){
     //shuffled乱序 提供时间

@@ -36,12 +36,12 @@ fun main() {
     }
 
 //    参数name的类型放在匿名函数的类型定义括号内 参数名name则放在函数定义中
-    val blessingFunction1:(String) -> String = { name ->
+    val blessingFunction1:(Int) -> String = { year ->
         val holiday = "New Year."
-        "$name, Happy $holiday"
+        "$year, Happy $holiday"
     }
 
-    println(blessingFunction1("Jack"))
+    println(blessingFunction1(2023))
 
     //用it
     val blessingFunction2:(String) -> String = {

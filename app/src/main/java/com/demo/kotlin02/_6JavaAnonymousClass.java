@@ -6,10 +6,12 @@ import java.util.Random;
  * @author ningchuanqi
  * @description
  */
-public class JavaAnonymousClass {
+public class _6JavaAnonymousClass {
 
     public static void main(String[] args) {
+        //静态内部类
         showOnBoard("卫生纸", new MyDisCountWords());
+        //匿名内部类
         showOnBoard("牙膏", new DiscountWords() {
             @Override
             public String getDiscountWords(String goodsName, int hour) {
