@@ -1,5 +1,6 @@
 import java.io.File
-//伴生对象
+//伴生对象 一个类里只能有一个伴生对象
+//93-伴生对象
 open class ConfigMap{
 
     companion object{

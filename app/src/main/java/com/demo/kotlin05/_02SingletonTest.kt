@@ -1,4 +1,5 @@
 //object对象声明
+//《91-对象声明》
 object ApplicationConfig{
     init {
         println("ApplicationConfig loading...")
@@ -10,9 +11,10 @@ object ApplicationConfig{
 }
 
 fun main() {
-    //类名，实例名
+    //既是类名，又是实例名
     //同一个 实例
     ApplicationConfig.doSomething()
-    println(ApplicationConfig)
-    println(ApplicationConfig)
+    println(ApplicationConfig)//ApplicationConfig@57829d67
+    println(ApplicationConfig)//    ApplicationConfig@57829d67
+
 }

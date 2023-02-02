@@ -1,4 +1,18 @@
+import java.util.*
+
 fun main() {
+    //打乱数组。
+    val a = intArrayOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17)
+    val r = Random()
+    for (i in a) {
+        val x = r.nextInt(a.size)
+        val temp = a[i]
+        a[i] = a[x]
+        a[x] = temp
+    }
+    for (i in a) {
+        print(a[i].toString() + ",")
+    }
     val getDiscountWords1 = getDiscountWords1()
     val getDiscountWords2 = configDiscountWords2()
     println(getDiscountWords1(true))

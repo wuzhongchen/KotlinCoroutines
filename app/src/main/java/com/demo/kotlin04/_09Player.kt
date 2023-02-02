@@ -14,9 +14,9 @@ class _09Player(
         }
 
     var age = _age
-        get() = age.absoluteValue //返回绝对值
+        get() = field.absoluteValue //返回绝对值
         set(value) {
-            field = age.absoluteValue
+            field = field.absoluteValue
         }
 
     var isNormal = _isNormal
@@ -24,6 +24,7 @@ class _09Player(
 }
 
 fun main() {
-    val p = _09Player("Jack", 20, true)
+    val p = _09Player("rose", -20, true)
     //p.name = "rose" name只读 不可改变
+    println("${p.age}")
 }
