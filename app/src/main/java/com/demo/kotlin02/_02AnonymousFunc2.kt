@@ -4,7 +4,7 @@ fun main() {
         val currentYear = 2027
         "${currentYear}年，双11${goodsName}促销倒计时：$hour 小时"
     }
-
+    //函数showOnBoard的参数 是 另外一个匿名函数getDiscountWords
     showOnBoard("卫生纸",getDiscountWords)
 }
 

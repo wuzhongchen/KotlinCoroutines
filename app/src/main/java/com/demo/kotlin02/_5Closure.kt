@@ -23,8 +23,10 @@ fun main() {
 fun getDiscountWords1(): (Boolean) -> String{
     val currentYear = 2027
     val hour = (1..24).shuffled().last()
-    // goodsName 引用了 configDiscountWords的 变量
+    // productOr 引用了 configDiscountWords的 变量
     return {productOr: Boolean ->
+//        val currentYear = 2027
+//        val hour = (1..24).shuffled().last()
         "${currentYear}年，双11${if(productOr) "卫生纸" else "牙膏"}促销倒计时：$hour 小时"
     }
 }

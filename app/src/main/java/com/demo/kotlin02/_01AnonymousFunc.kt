@@ -65,6 +65,9 @@ fun main() {
 
     println(blessingFunction4("Jack",2027))
 
+    val funtion = {girlname:String, year:Int ->
+        year > 10
+    }
 
     val blessingFunction = {name:String, year:Int ->
         val holiday = "New Year."
