@@ -15,7 +15,7 @@ fun main() {
     println(str3?.capitalize())
     println(str3?.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() })
 
-    var str:String? = "lambda_last"
+    var str:String? = null
 //    str = ""
     //println(str?.capitalize())
     /**

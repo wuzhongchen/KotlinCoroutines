@@ -10,9 +10,9 @@ fun main() {
 
     //精度损失
     println(8.956756.toInt())
-    //四舍五入
+    //四舍五入 为整数
     println(8.956756.roundToInt())
 
-    val s = "%.2f".format(8.956756)
+    val s = "%.3f".format(8.956756)
     println(s)
 }

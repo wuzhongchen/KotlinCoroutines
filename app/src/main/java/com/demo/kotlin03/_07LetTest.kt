@@ -13,6 +13,7 @@ fun main() {
 }
 
 fun formatGreeting(guestName: String?): String {
+    //?. 安全调用
     return guestName?.let {
         "Welcome, $it."
     } ?: "What's your name?"

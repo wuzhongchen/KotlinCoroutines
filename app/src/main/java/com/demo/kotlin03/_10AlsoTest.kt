@@ -8,7 +8,7 @@ fun main() {
      */
     //kotlin 可以先声明它 紧接着初始化
     var fileContents:List<String>
-    val file = File("/Users/hs/AndroidStudioProjects/Kt_Demo/txt/i have a dream.txt")
+    val file = File("C://Users//isabe//AndroidStudioProjects//Kt_Demo//txt//i have a dream.txt")
         .also {
             //先打印 文件名
             println(it.name)

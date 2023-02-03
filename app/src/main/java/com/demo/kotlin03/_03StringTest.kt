@@ -1,6 +1,6 @@
 //字符串操作
 const val NAME = "Jimmy's friend"
-const val NAMES = "jack,jacky,jason,loluy"
+const val NAMES = "jack,cidy,jason,loluy"
 fun main() {
 
     val index = NAME.indexOf('\'')
@@ -15,9 +15,11 @@ fun main() {
     data[0]
 
     val (origin,dest,proxy,gullo) = NAMES.split(",")
-    println("$origin/ $dest/ $proxy/ $gullo")
+    println("$origin/ $dest/ $proxy/ $gullo\n")
 
     val str1 = "The people's Republic of China."
+    println("***明文***:\n$str1\n")
+
     var plusStr = ""
     val str3 = str1.forEach {
             thisChar ->
@@ -31,7 +33,7 @@ fun main() {
         }
         plusStr += dStr
     }
-    println(plusStr)
+    println("加密之后：\n$plusStr")
 
     val str4 = str1.replace(Regex("[aeiou]")){
         when(it.value){
@@ -44,7 +46,6 @@ fun main() {
         }
     }
 
-    println("***明文***:\n$str1\n***明文***")
 
     println("加密之后：\n$str4")
 
