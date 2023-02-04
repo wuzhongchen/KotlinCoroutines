@@ -16,6 +16,17 @@ class MainActivity : AppCompatActivity() {
             contains("great")
         }
         println(result)
+
+        //kotlin 可以先声明它 紧接着初始化
+        var fileContents:List<String>
+        val file = File("../txt/i have a dream.txt")
+            .also {
+                //先打印 文件名
+                println(it.name)
+            }.also {
+                //打印 List集合 没有换行
+                fileContents = it.readLines()
+            }
     }
 
 //    fun  readFile() {
@@ -30,13 +41,13 @@ class MainActivity : AppCompatActivity() {
 //        }
 //    }
 //
-//    fun readFile2() {
-//        var file = File("../txt/i have a dream.txt")
-//        val result = file.run {
-//            readText().contains("great")
-//        }
-//        println(result)
-//    }
+    fun readFile2() {
+        var file = File("../txt/i have a dream.txt")
+        val result = file.run {
+            readText().contains("great")
+        }
+        println(result)
+    }
 
 //    private fun readAsset(fileName: String): String {
 //        return assets
