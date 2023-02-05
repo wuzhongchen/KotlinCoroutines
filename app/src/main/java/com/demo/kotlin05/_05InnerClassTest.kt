@@ -1,3 +1,4 @@
+//《94-嵌套类》
 class Player2 {
 
     class Equipment(var name: String) {
