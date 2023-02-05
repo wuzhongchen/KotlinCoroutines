@@ -26,5 +26,5 @@ fun main() {
     val p2 = _Player2("Rose")
 
     val p3 = _Player2("Jacky",20)
-    println(p3.name)
+    println(p3.age)
 }

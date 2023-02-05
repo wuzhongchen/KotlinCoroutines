@@ -1,4 +1,4 @@
-class _Student(
+class _Player3_Student(
 
     //1.主构造函数里声明的属性
     _name:String,
@@ -41,5 +41,5 @@ class _Student(
 //}
 
 fun main() {
-    _Student("Jack")
+    _Player3_Student("Jack")
 }

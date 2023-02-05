@@ -1,3 +1,5 @@
+package com.demo.kotlin04_
+
 class Player0{
 
     //针对你定义的每一个属性 Kotlin都会产生一个field 一个getter以及一个setter
