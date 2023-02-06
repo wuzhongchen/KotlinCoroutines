@@ -16,6 +16,7 @@ class MagicBox<T : Human>() {
 //        }
 //    }
 
+    //reified关键字检查泛型参数类型
     inline fun <reified T> randomOrBackup2(backup: () -> T): T {
         val items = listOf(
             Boy("Jack", 20),
@@ -49,7 +50,7 @@ fun main() {
     val box1:MagicBox<Man> = MagicBox()
     //又backup函数，推断出来T的类型
     val subject = box1.randomOrBackup2({
-        Man("Jimmy", 38)
+        Man("Jimmy_Backup", 38)
     }
     )
     println("==============================")

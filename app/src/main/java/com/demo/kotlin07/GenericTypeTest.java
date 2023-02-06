@@ -10,7 +10,7 @@ public class GenericTypeTest {
 
     public static void main(String[] args) {
         //          父类类型                            子类类型
-        //ArrayList<CharSequence> list = new ArrayList<String>();
+//        ArrayList<CharSequence> list = new ArrayList<String>();
 
 //        ArrayList<String> list = new ArrayList<CharSequence>();
     }
