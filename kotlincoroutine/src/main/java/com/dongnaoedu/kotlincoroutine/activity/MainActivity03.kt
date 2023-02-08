@@ -1,13 +1,12 @@
 package com.dongnaoedu.kotlincoroutine.activity
 
 import android.annotation.SuppressLint
-import android.os.AsyncTask
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.dongnaoedu.kotlincoroutine.R
-import com.dongnaoedu.kotlincoroutine.api.User
+import com.dongnaoedu.kotlincoroutine.model.User
 import com.dongnaoedu.kotlincoroutine.api.userServiceApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -22,6 +21,7 @@ import kotlinx.coroutines.withContext
 class MainActivity03 : AppCompatActivity() {
 
     private var nameTextView:TextView? = null
+    private var nameTextView2:TextView? = null
 
     @SuppressLint("StaticFieldLeak","SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +29,8 @@ class MainActivity03 : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         nameTextView = findViewById<TextView>(R.id.nameTextView)
-        nameTextView?.text = "Jack"
+        nameTextView2 = findViewById<TextView>(R.id.nameTextView2)
+        nameTextView?.text = "activity03"
 
         val submitButton = findViewById<Button>(R.id.submitButton).also {
             it.setOnClickListener {
@@ -46,11 +47,12 @@ class MainActivity03 : AppCompatActivity() {
     }
 
     private suspend fun get() = withContext(Dispatchers.IO){
-        userServiceApi.getUser("xxx")
+        userServiceApi.getUser("13859")
     }
 
     private fun show(user: User) {
-        nameTextView?.text = "address:${user?.address}"
+        nameTextView?.text = "title:${user?.catename}"
+        nameTextView2?.text = "intro:${user?.intro}"
     }
 
 }

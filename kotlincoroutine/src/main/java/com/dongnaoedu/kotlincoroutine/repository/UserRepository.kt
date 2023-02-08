@@ -1,6 +1,6 @@
 package com.dongnaoedu.kotlincoroutine.repository
 
-import com.dongnaoedu.kotlincoroutine.api.User
+import com.dongnaoedu.kotlincoroutine.model.User
 import com.dongnaoedu.kotlincoroutine.api.userServiceApi
 
 /**
@@ -10,8 +10,8 @@ import com.dongnaoedu.kotlincoroutine.api.userServiceApi
  */
 class UserRepository {
 
-    suspend fun getUser(name: String): User {
-        return userServiceApi.getUser(name)
+    suspend fun getUser(bid: String): User {
+        return userServiceApi.getUser(bid)
     }
 
 }

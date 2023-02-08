@@ -1,18 +1,18 @@
 package com.dongnaoedu.kotlincoroutine.api
 
 import android.util.Log
+import com.dongnaoedu.kotlincoroutine.model.User
 import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.converter.moshi.MoshiConverterFactory
-import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.*
 
 /**
  *
  * @author ningchuanqi
  * @version V1.0
  */
-data class User(val name: String, val address: String)
+//data class User(val name: String, val address: String)
 
 val userServiceApi: UserServiceApi by lazy {
     val retrofit = retrofit2.Retrofit.Builder()
@@ -22,7 +22,7 @@ val userServiceApi: UserServiceApi by lazy {
                     //Log.d("jason", "boy:${body()?.string()}")
                 }
             }.build())
-            .baseUrl("http://192.168.1.4:8080/kotlinstudyserver/")
+            .baseUrl("http://androidmcdn.goreadnovels.com/")
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
     retrofit.create(UserServiceApi::class.java)
@@ -40,10 +40,13 @@ val userServiceApi: UserServiceApi by lazy {
 
 interface UserServiceApi {
 
-    @GET("user")
-    fun loadUser(@Query("name") name: String) : Call<User>
+    @FormUrlEncoded
+    @POST("clientGetBookInfo")
+    fun loadUser(@Field("bid") bid: String) : Call<User>
 
-    @GET("user")
-    suspend fun getUser(@Query("name") name: String) : User
+    //异步 挂起
+    @FormUrlEncoded
+    @POST("clientGetBookInfo")
+    suspend fun getUser(@Field("bid") bid: String) : User
 
 }

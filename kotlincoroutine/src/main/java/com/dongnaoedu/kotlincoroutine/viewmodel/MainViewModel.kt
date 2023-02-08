@@ -3,7 +3,7 @@ package com.dongnaoedu.kotlincoroutine.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.dongnaoedu.kotlincoroutine.api.User
+import com.dongnaoedu.kotlincoroutine.model.User
 import com.dongnaoedu.kotlincoroutine.repository.UserRepository
 import kotlinx.coroutines.launch
 
@@ -18,9 +18,9 @@ class MainViewModel() : ViewModel() {
 
     private val userRepository = UserRepository()
 
-    fun getUser(name: String) {
+    fun getUser(bid: String) {
         viewModelScope.launch {
-            userLiveData.value = userRepository.getUser(name)
+            userLiveData.value = userRepository.getUser(bid)
         }
     }
 
