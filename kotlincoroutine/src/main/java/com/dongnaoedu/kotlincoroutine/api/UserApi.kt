@@ -6,6 +6,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.*
+import java.util.concurrent.TimeUnit
 
 /**
  *
@@ -14,9 +15,15 @@ import retrofit2.http.*
  */
 //data class User(val name: String, val address: String)
 
+private const val CONNECT_TIMEOUT = 30L
+private const val READ_TIMEOUT = 10L
+
 val userServiceApi: UserServiceApi by lazy {
     val retrofit = retrofit2.Retrofit.Builder()
-            .client(OkHttpClient.Builder().addInterceptor {
+            .client(OkHttpClient.Builder()
+                .connectTimeout(CONNECT_TIMEOUT, TimeUnit.SECONDS)
+                .readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)
+                .addInterceptor {
                 it.proceed(it.request()).apply {
                     Log.d("jason", "request:${code()}")
                     //Log.d("jason", "boy:${body()?.string()}")
