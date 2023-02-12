@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.dongnaoedu.flowpractice.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_downloadFragment"
+            app:destination="@id/downloadFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_numberFragment"
+            app:destination="@id/numberFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sharedFlowFragment"
+            app:destination="@id/sharedFlowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/downloadFragment"
+        android:name="com.dongnaoedu.flowpractice.fragment.DownloadFragment"
+        android:label="fragment_download"
+        tools:layout="@layout/fragment_download" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.dongnaoedu.flowpractice.fragment.UserFragment"
+        android:label="UserFragment" />
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.dongnaoedu.flowpractice.fragment.ArticleFragment"
+        android:label="ArticleFragment" />
+    <fragment
+        android:id="@+id/numberFragment"
+        android:name="com.dongnaoedu.flowpractice.fragment.NumberFragment"
+        android:label="NumberFragment" />
+    <fragment
+        android:id="@+id/sharedFlowFragment"
+        android:name="com.dongnaoedu.flowpractice.fragment.SharedFlowFragment"
+        android:label="fragment_shared_flow"
+        tools:layout="@layout/fragment_shared_flow" />
+</navigation>
