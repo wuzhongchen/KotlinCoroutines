@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.dongnaoedu.flowpractice.model.Article
+import com.dongnaoedu.flowpractice.model.SearchResultEntity
 import com.dongnaoedu.flowpractice.net.RetrofitClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
@@ -20,15 +20,18 @@ import kotlinx.coroutines.launch
  */
 class ArticleViewModel(app: Application) : AndroidViewModel(app) {
 
-    val articles = MutableLiveData<List<Article>>()
+    val articles = MutableLiveData<SearchResultEntity>()
 
     fun searchArticles(key: String) {
         viewModelScope.launch {
             flow {
-                val list = RetrofitClient.articleApi.searchArticles(key)
+                val list = RetrofitClient.articleApi.searchArticles(
+                    key=key)
                 emit(list)
             }.flowOn(Dispatchers.IO)
-                .catch { e -> e.printStackTrace() }
+                .catch { e ->
+                    e.printStackTrace()
+                }
                 .collect {
                     articles.setValue(it)
                 }

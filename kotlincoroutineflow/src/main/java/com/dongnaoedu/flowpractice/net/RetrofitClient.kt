@@ -3,6 +3,7 @@ package com.dongnaoedu.flowpractice.net
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 
 /**
  *
@@ -11,10 +12,17 @@ import retrofit2.converter.gson.GsonConverterFactory
  */
 object RetrofitClient {
 
+    private const val CONNECT_TIMEOUT = 30L
+    private const val READ_TIMEOUT = 10L
+
     private val instance: Retrofit by lazy {
         Retrofit.Builder()
-            .client(OkHttpClient.Builder().build())
-            .baseUrl("http://192.168.1.4:8080/kotlinstudyserver/")
+            .client(OkHttpClient.Builder()
+                .connectTimeout(CONNECT_TIMEOUT, TimeUnit.SECONDS)
+                .readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)
+                .build())
+
+            .baseUrl("http://androidmcdn.goreadnovels.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

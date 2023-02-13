@@ -1,8 +1,8 @@
 package com.dongnaoedu.flowpractice.net
 
-import com.dongnaoedu.flowpractice.model.Article
-import retrofit2.http.GET
-import retrofit2.http.Query
+import com.dongnaoedu.flowpractice.model.SearchEntity
+import com.dongnaoedu.flowpractice.model.SearchResultEntity
+import retrofit2.http.*
 
 /**
  *
@@ -11,9 +11,14 @@ import retrofit2.http.Query
  */
 interface ArticleApi {
 
-    @GET("article")
+//    @GET("article")
+//    suspend fun searchArticles(
+//        @Query("key") key: String
+//    ): List<Article>
+
+    @FormUrlEncoded
+    @POST("getbooks")
     suspend fun searchArticles(
-        @Query("key") key: String
-    ): List<Article>
+        @Field("keyword") key: String): SearchResultEntity
 
 }
