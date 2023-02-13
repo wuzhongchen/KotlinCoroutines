@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 class NumberViewModel : ViewModel() {
 
     val number = MutableStateFlow(0)
-
+    //StateFlow和LiveData
     fun increment() {
         number.value++
     }

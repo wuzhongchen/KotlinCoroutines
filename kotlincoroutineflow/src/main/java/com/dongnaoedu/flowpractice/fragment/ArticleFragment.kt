@@ -36,7 +36,7 @@ class ArticleFragment : Fragment() {
         return mBinding.root
     }
 
-    //获取关键字
+    //扩展函数 获取关键字
     private fun TextView.textWatcherFlow(): Flow<String> = callbackFlow {
         val textWatcher = object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
@@ -52,6 +52,11 @@ class ArticleFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         lifecycleScope.launchWhenCreated {
+//            mBinding.etSearch.textWatcherFlow().collect {
+//                viewModel.searchArticles(it).collect {
+//                    //嵌套flow 不建议
+//                }
+//            }
             mBinding.etSearch.textWatcherFlow().collect {
                 Log.d("ning", "collect keywords: $it")
                 viewModel.searchArticles(it)
