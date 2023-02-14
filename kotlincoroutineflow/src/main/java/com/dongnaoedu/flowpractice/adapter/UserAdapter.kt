@@ -30,7 +30,10 @@ class UserAdapter(private val context: Context) : RecyclerView.Adapter<BindingVi
     override fun onBindViewHolder(holder: BindingViewHolder, position: Int) {
         val item = data[position]
         val binding = holder.binding as ItemUserBinding
-        binding.text.text = "${item.uid}, ${item.firstName}, ${item.lastName}"
+        binding.text.text = "${item.bid}, 书名：${item.catename}, 作者：${item.author}, 行动1：${item.action_section?.get(0)?.title}, " +
+                "行动2：${item.action_section?.get(1)?.title}," +
+                "行动3：${item.action_section?.get(2)?.title}," +
+                "标签：${item.tagsary?.get(0)}  ${item.tagsary?.get(1)}  ${item.tagsary?.get(2)}"
     }
 
     override fun getItemCount() = data.size

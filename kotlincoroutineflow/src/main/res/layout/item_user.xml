@@ -13,6 +13,6 @@
         android:gravity="center"
         android:paddingVertical="4dp"
         android:textSize="14sp"
-        tools:text="飞色鹿心门  作者：嗷嗷"/>
+        tools:text="13859 书名：飞色鹿心门 作者：嗷嗷 "/>
 
 </LinearLayout>

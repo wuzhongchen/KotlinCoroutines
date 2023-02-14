@@ -20,12 +20,21 @@ import kotlinx.coroutines.launch
 class UserViewModel(app: Application) : AndroidViewModel(app) {
 
 
-    fun insert(uid: String, firstName: String, lastName: String) {
+//    fun insert(bid: String, firstName: String, lastName: String) {
+//        viewModelScope.launch {
+//            AppDatabase.getInstance(getApplication())
+//                .userDao()
+//                .insert(User(bid.toInt(), firstName, lastName))
+//            Log.d("ning", "insert user:$uid")
+//        }
+//    }
+
+    fun insert(user: User) {
         viewModelScope.launch {
             AppDatabase.getInstance(getApplication())
                 .userDao()
-                .insert(User(uid.toInt(), firstName, lastName))
-            Log.d("ning", "insert user:$uid")
+                .insert(user)
+            Log.d("ning", "插入书籍id:${user.bid}")
         }
     }
 
