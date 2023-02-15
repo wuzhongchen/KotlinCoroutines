@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
  */
 class NumberViewModel : ViewModel() {
 
+    //需要一个初始值 支持变换 合并等操作符
     val number = MutableStateFlow(0)
     //StateFlow和LiveData
     fun increment() {
