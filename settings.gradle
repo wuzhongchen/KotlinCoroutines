@@ -1,3 +1,4 @@
 rootProject.name = "Kotlin Demo"
 include ':app'
 include ':kotlincoroutine'
+include ':kotlincoroutineflow'
